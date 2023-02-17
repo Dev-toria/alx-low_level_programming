@@ -1,23 +1,22 @@
 #include <stdio.h>
+
 /**
- * main - main function
+ * main - Entry point
  *
- * prints the various sizes of data types and exits
- * Returns: int(0) (success)
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
-	char charType;
-	int intType;
-	long int long_intType;
-	long long int long_longType;
-	float floatType;
+	int a;
+	long int b;
+	long long int c;
+	char d;
+	float f;
 
-	printf("size of a char: %zu byte\n", sizeof(charType));
-	printf("size of an int: %zu bytes\n", sizeof(intType));
-	printf("size of a long int: %zu bytes\n", sizeof(long_intType));
-	printf("size of a long long int: %zu bytes\n", sizeof(long_longType));
-	printf("size of a float: %zu bytes\n", sizeof(floatType));
-
+	printf("Size of a char: %lu byte(s)\n", (unsigned long)sizeof(d));
+	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(a));
+	printf("Size of a long int: %lu byte(s)\n", (unsigned long)sizeof(b));
+	printf("Size of a long long int: %lu byte(s)\n", (unsigned long)sizeof(c));
+	printf("Size of a float: %lu byte(s)\n", (unsigned long)sizeof(f));
 	return (0);
 }
