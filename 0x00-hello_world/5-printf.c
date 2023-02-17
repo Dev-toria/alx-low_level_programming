@@ -2,8 +2,9 @@
 /**
  * main -entry point
  *
- * prints a string and returns 0 then exits
- * Return: int(0) 
+ *
+ * print a string and return 0 then exits
+ * Return: int(0)
  */
 int main(void)
 {
