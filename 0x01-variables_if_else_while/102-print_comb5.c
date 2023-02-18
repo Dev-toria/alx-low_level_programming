@@ -19,11 +19,11 @@ int main(void)
 			{
 				for (d = 1; d < 10; d++)
 				{
-					putchar((char) (a + '0'));
-					putchar((char) (b + '0'));
+					putchar((char) (a + 48));
+					putchar((char) (b + 48));
 					putchar(' ');
-					putchar((char) (c + '0'));
-					putchar((char) (d + '0'));
+					putchar((char) (c + 48));
+					putchar((char) (d + 48));
 
 					if (a == 9 && b == 8 && c == 9 && d == 9)
 						continue;
