@@ -12,10 +12,10 @@ int main(void)
 	long t2 = 2;
 	long next_term = t1 + t2;
 
-	printf("%ld, %ld, ", t1, t2);
+	printf("%ld, %ld", t1, t2);
 	for (i = 3; i <= 50; i++)
 	{
-		printf("%ld, ", next_term);
+		printf(", %ld", next_term);
 		t1 = t2;
 		t2 = next_term;
 		next_term = t1 + t2;
