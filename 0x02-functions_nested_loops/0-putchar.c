@@ -1,22 +1,20 @@
 #include <stdio.h>
 #include <string.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (success)
- *
- */
+* main - main function entry
+*
+* Return: int(0)
+*/
 int main(void)
 {
-	char str[] = "_putchar";
-	int i;
+	char text[] = "_putchar";
 	char s;
+	int i;
+	int len = strlen(text);
 
-	while (i < strlen(str))
+	for (i = 0; i <= len; i++)
 	{
-		s = str[i];
-		i++;
-
+		s = text[i];
 		if (s == '\0')
 			s = '\n';
 		putchar(s);
