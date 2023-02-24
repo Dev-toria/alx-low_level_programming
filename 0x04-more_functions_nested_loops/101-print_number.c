@@ -1,36 +1,46 @@
 #include "main.h"
-void print_integer(int m);
-
 /**
- * print_number - a function that prints an integer.
- * @n: An input integer
- * Return: Nothing
+ * print_number - print an int numbers.
+ * @n: number tested
+ * Return: Always 0.
  */
 void print_number(int n)
 {
-	if (n == 0)
-		_putchar('0');
-	else if (n < 0)
+	int i, j, digit, digits, power;
+	unsigned int temp, numchar, number;
+
+	digit = 0;
+	if (n < 0)
 	{
 		_putchar('-');
-		print_integer(n * -1);
+		temp = -n;
 	}
 	else
-		print_integer(n);
-}
+	{
+		temp = n;
+	}
 
-/**
- * print_integer - A function to priting n
- * @m: an input unsigned integer
- * Return: Nothing
- */
-void print_integer(int m)
-{
-	int i = 1000000000;
+	number = temp;
 
-	for (; i >= 1; i /= 10)
-		if (m / i != 0)
-		{
-			_putchar((m / i) % 10 + '0');
-		}
+	while (number >= 10)
+	{
+		number = number / 10;
+		digit++;
+	}
+	digits = digit + 1;
+	power = 1;
+	i = 1;
+
+	while (i < digits)
+	{
+		power = power * 10;
+		i++;
+	}
+	j = power;
+	while (j >= 1)
+	{
+		numchar = (temp / j) % 10;
+		_putchar(numchar + '0');
+		j = j / 10;
+	}
 }
