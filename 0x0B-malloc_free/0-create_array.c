@@ -26,10 +26,7 @@ char *create_array(unsigned int size, char c)
 				s[i] = c;
 			}
 		}
-		else
-		{
-			return (s);
-		}
+		return (s);
 	}
 	return (NULL);
 }
