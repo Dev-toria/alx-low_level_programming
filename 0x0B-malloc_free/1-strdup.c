@@ -28,16 +28,14 @@ char *_strdup(char *str)
 		ptstr = malloc((len_count * sizeof(char)) + 1);
 		int i;
 
-		if (ptstr == NULL)
+		if (ptstr != NULL)
 		{
-			return (NULL);
+			for (i = 0; str[i] != '\0'; i++)
+			{
+				ptstr[i] = str[i];
+			}
+			ptstr[i] = '\0';
 		}
-
-		for (i = 0; str[i] != '\0'; i++)
-		{
-			ptstr[i] = str[i];
-		}
-		ptstr[i] = '\0';
 	}
 	return (ptstr);
 }
